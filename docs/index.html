@@ -3,23 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>supreme-octo-funicular</title>
+  <title>michelweiland.org</title>
   <!-- Bulma CSS via CDN (leichtgewichtig, CSS-only) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <meta name="description" content="Mic helping page - michelweiland.org" />
+  <!-- Canonical domain redirect: wenn die Seite über github.io aufgerufen wird, weiterleiten -->
+  <script>
+    (function(){
+      try {
+        var host = location.hostname;
+        var target = 'michelweiland.org';
+        // Wenn wir auf github.io oder auf andere Hosts sind, redirect
+        if (host !== target && host.indexOf('github.io') !== -1) {
+          location.replace('https://' + target + location.pathname + location.search + location.hash);
+        }
+      } catch (e) { console.error(e); }
+    })();
+  </script>
 </head>
 <body>
   <section class="section">
     <div class="container">
-      <h1 class="title">supreme-octo-funicular</h1>
-      <p class="subtitle">Eine kleine statische Website — Platzhalter für deine Inhalte.</p>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <h1 class="title is-4">michelweiland.org</h1>
+          </div>
+        </div>
+      </nav>
 
       <div class="box">
-        <p>Diese Seite ist vorbereitet für GitHub Pages mit einer eigenen Domain. Bearbeite <code>docs/index.html</code> und pushe Änderungen in den Branch <code>main</code>.</p>
+        <h2 class="title is-3">Willkommen</h2>
+        <p class="subtitle is-5">Dies ist eine einfache, statische Landing-Page. Die Seite ist für GitHub Pages mit einer eigenen Domain konfiguriert.</p>
+
+        <div class="content">
+          <p>Du kannst diese Seite bearbeiten, indem du die Datei <code>docs/index.html</code> änderst und in den Branch <code>main</code> pusht. Änderungen werden automatisch auf GitHub Pages sichtbar, sobald die DNS- und GitHub Pages-Einstellungen korrekt sind.</p>
+          <ul>
+            <li>Stil-Framework: Bulma (via CDN)</li>
+            <li>Domain: <strong>michelweiland.org</strong></li>
+          </ul>
+        </div>
       </div>
 
       <footer class="footer">
         <div class="content has-text-centered">
-          <p>Letzte Änderung: <span id="last-updated">siehe README</span></p>
+          <p>Letzte Änderung: siehe <code>README.md</code></p>
+          <p>Bei Fragen zur DNS- oder Cloudflare-Konfiguration schreib mir kurz — ich helfe beim Feinschliff.</p>
         </div>
       </footer>
     </div>
